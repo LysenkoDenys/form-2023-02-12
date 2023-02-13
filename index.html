@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>FORMS: styling and sending</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <form action="#" id="form" class="form__body">
+          <h1 class="form__title">Send data to e-mail</h1>
+          <div class="form__item">
+            <label for="formName" class="form__label">Name*</label>
+            <input
+              id="formName"
+              type="text"
+              name="name"
+              class="form__input _req"
+            />
+          </div>
+          <div class="form__item">
+            <label for="formEmail" class="form__label">E-mail*</label>
+            <input
+              id="formEmail"
+              type="text"
+              name="email"
+              class="form__input _req _email"
+            />
+          </div>
+          <div class="form__item">
+            <div class="form__label">Left-handed or right-handed?</div>
+            <div class="options">
+              <div class="options__item">
+                <input
+                  checked
+                  id="formRightHanded"
+                  type="radio"
+                  name="hand"
+                  class="options__input"
+                  value="right"
+                />
+                <label for="formRightHanded" class="options__label"
+                  ><span>right-handed</span></label
+                >
+              </div>
+              <div class="options__item">
+                <input
+                  id="formLeftHanded"
+                  type="radio"
+                  name="hand"
+                  class="options__input"
+                  value="left"
+                />
+                <label for="formLeftHanded" class="options__label"
+                  ><span>left-handed</span></label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form__item">
+            <label for="formMessage" class="form__label">Message</label>
+            <textarea
+              name="message"
+              id="formMessage"
+              class="form__input"
+            ></textarea>
+          </div>
+          <div class="form__item">
+            <div class="form__label">Age:</div>
+            <select name="age" class="form__select">
+              <option value="from 18 to 25" selected="selected">Young</option>
+              <option value="from 25 to 45">Old</option>
+              <option value="from 45">Too old</option>
+            </select>
+          </div>
+          <div class="form__item">
+            <div class="form__label">Attach photo</div>
+            <div class="file">
+              <div class="file__item">
+                <input
+                  accept=".jpg, .png, .gif"
+                  id="formImage"
+                  type="file"
+                  name="image"
+                  class="file__input"
+                />
+                <div class="file__button">Select</div>
+              </div>
+              <div id="formPreview" class="file__preview"></div>
+            </div>
+          </div>
+          <div class="form__item">
+            <div class="checkbox">
+              <input
+                checked
+                id="formAgreement"
+                type="checkbox"
+                name="agreement"
+                class="checkbox__input _req"
+              />
+              <label for="formAgreement" class="checkbox__label"
+                ><span
+                  >I agree with use my personal data according with next
+                  <a href="#">Conditions</a>*</span
+                ></label
+              >
+            </div>
+          </div>
+          <button type="submit" class="form__button">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
